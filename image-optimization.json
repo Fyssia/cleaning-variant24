@@ -1,0 +1,86 @@
+[
+  {
+    "file": "static/images/services/support.svg",
+    "bytes": 378,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/general.svg",
+    "bytes": 418,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/after-repair.svg",
+    "bytes": 401,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/office-daily.svg",
+    "bytes": 430,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/window.svg",
+    "bytes": 393,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/fridge.svg",
+    "bytes": 379,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/oven.svg",
+    "bytes": 396,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/microwave.svg",
+    "bytes": 392,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/cabinets.svg",
+    "bytes": 381,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/balcony.svg",
+    "bytes": 405,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/ironing.svg",
+    "bytes": 386,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/sofa.svg",
+    "bytes": 411,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/chandelier.svg",
+    "bytes": 414,
+    "width": 480,
+    "height": 240
+  },
+  {
+    "file": "static/images/services/limescale.svg",
+    "bytes": 403,
+    "width": 480,
+    "height": 240
+  }
+]
