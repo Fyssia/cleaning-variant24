@@ -1,0 +1,3 @@
+# Generated third-party reports are stored verbatim.
+evidence/lighthouse/*.html -whitespace
+evidence/validators/*.json -whitespace
