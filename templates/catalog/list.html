@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% block content %}
+<div class="container"><nav class="crumbs" aria-label="Хлебные крошки"><a href="{% url 'catalog:home' %}">Главная</a> / {{ title }}</nav><section class="section"><h1>{{ title }}</h1>
+<form class="catalog-filter card flat" id="catalog-filter" action="{% url 'catalog:search' %}" method="get" data-endpoint="{% url 'catalog:search' %}"><div class="grid">
+<div class="c4 field"><label for="q">Найти услугу</label><input class="input" id="q" type="search" name="q" value="{{ query }}" maxlength="100" placeholder="Например, мытьё окон"></div>
+<div class="c3 field"><label for="kind">Вид услуги</label><select class="select" id="kind" name="kind"><option value="">Все услуги</option><option value="main"{% if kind == 'main' %} selected{% endif %}>Уборка помещений</option><option value="extra"{% if kind == 'extra' %} selected{% endif %}>Дополнительные</option></select></div>
+<div class="c3 field"><label for="room">Помещение</label><select class="select" id="room" name="room"><option value="">Все помещения</option>{% for item in room_types %}<option value="{{ item.pk }}"{% if room == item.pk|stringformat:'s' %} selected{% endif %}>{{ item.name }}</option>{% endfor %}</select></div>
+<div class="c2 field"><label for="sort">Сортировка</label><select class="select" id="sort" name="sort"><option value="name">По названию</option><option value="price"{% if sort == 'price' %} selected{% endif %}>Сначала дешевле</option><option value="-price"{% if sort == '-price' %} selected{% endif %}>Сначала дороже</option></select></div></div>
+<div class="row"><button class="btn" type="submit">Найти услуги</button><a class="btn secondary" href="{% url 'catalog:services' %}">Сбросить фильтры</a><span class="hint" id="search-status" role="status"></span></div></form>
+<div id="catalog-results" class="section-heading">{% include 'catalog/results.html' %}</div>
+</section></div>{% endblock %}

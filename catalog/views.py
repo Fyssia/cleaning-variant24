@@ -22,3 +22,30 @@ def information(request, page):
     }
     title, template = pages[page]
     return render(request, 'catalog/' + template, {'title': title})
+
+
+def service_list(request):
+    from django.core.paginator import Paginator
+    from django.db.models import Q
+    services = Service.objects.filter(is_active=True).prefetch_related('room_types')
+    query = request.GET.get('q', '').strip()[:100]
+    if query:
+        services = services.filter(Q(name__icontains=query) | Q(description__icontains=query))
+    kind = request.GET.get('kind', '')
+    if kind in ['main', 'extra']:
+        services = services.filter(kind=kind)
+    room = request.GET.get('room', '')
+    if room.isdigit():
+        services = services.filter(room_types__pk=room)
+    sorting = request.GET.get('sort', 'name')
+    ordering = {'name': 'name', 'price': 'price', '-price': '-price'}.get(sorting, 'name')
+    page = Paginator(services.order_by(ordering, 'pk').distinct(), 20).get_page(request.GET.get('page'))
+    params = request.GET.copy(); params.pop('page', None)
+    return render(request, 'catalog/list.html', {'title': 'Результаты поиска' if request.resolver_match.url_name == 'search' else 'Каталог услуг', 'page_obj': page, 'query': query, 'kind': kind, 'room': room, 'sort': sorting, 'querystring': params.urlencode(), 'room_types': RoomType.objects.all()})
+
+
+def service_detail(request, slug):
+    from django.shortcuts import get_object_or_404
+    service = get_object_or_404(Service.objects.prefetch_related('room_types'), slug=slug, is_active=True)
+    reviews = Review.objects.filter(is_published=True, order__items__service=service).select_related('order__customer__user').prefetch_related('photos').distinct()[:12]
+    return render(request, 'catalog/detail.html', {'title': service.name, 'service': service, 'includes': service.includes.splitlines(), 'reviews': reviews})
