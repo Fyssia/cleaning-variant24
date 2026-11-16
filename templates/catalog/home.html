@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero"><div class="container"><h1>{{ title }}</h1><p class="muted">Цена считается сразу, без звонка. Бригада приезжает в выбранное время со своим инвентарём.</p></div></section>
+<section class="section" aria-labelledby="calculator-title"><div class="container"><div class="grid">
+  <div class="c8 card flat stack"><h2 id="calculator-title">Калькулятор стоимости</h2>
+    <form id="calculator" method="get">
+      <div class="field"><label for="room_type">Тип помещения</label><select class="select" id="room_type" name="room_type">{% for room in room_types %}<option value="{{ room.pk }}">{{ room.name }}</option>{% endfor %}</select></div>
+      <div class="grid calculator-fields"><div class="c4 field"><label for="area">Площадь, м²</label><input class="input" id="area" name="area" type="number" min="10" max="1000" step="0.1" value="54" required aria-describedby="area-hint"><span id="area-hint" class="hint">От 10 до 1000 м²</span></div>
+      <div class="c8 field"><label for="service">Вид уборки</label><select class="select" id="service" name="service">{% for service in main_services %}<option value="{{ service.pk }}"{% if service.slug == 'general' %} selected{% endif %}>{{ service.name }} · {{ service.price|floatformat:0 }} ₽/м²</option>{% endfor %}</select></div></div>
+      <fieldset class="extras"><legend>Дополнительные услуги</legend>{% for service in extra_services %}<div class="ex-row"><label for="extra_{{ service.pk }}">{{ service.name }} <span class="small">{{ service.price|floatformat:0 }} ₽</span></label><input class="input quantity" id="extra_{{ service.pk }}" name="extra_{{ service.pk }}" type="number" min="0" max="20" value="0" aria-label="{{ service.name }}: количество"></div>{% endfor %}</fieldset>
+      <button class="btn" type="submit">Рассчитать стоимость</button>
+    </form>
+  </div>
+  <div class="c4"><aside class="summary" aria-labelledby="estimate-title"><h2 id="estimate-title">Ваш заказ</h2><div id="estimate" role="status"><p class="muted">Укажите параметры уборки, чтобы узнать стоимость и длительность.</p></div><p id="estimate-error" class="hint error" role="alert"></p>{% block order_link %}{% endblock %}<p class="small summary-hint">Телефон для расчёта не нужен</p></aside></div>
+</div></div></section>
+<section class="section alt" aria-labelledby="popular-title"><div class="container"><h2 id="popular-title">Популярные услуги</h2><div class="cards">{% for service in services %}<article class="card"><h3>{{ service.name }}</h3><p class="price">от {{ service.price|floatformat:0 }} ₽ за {{ service.get_unit_display }}</p><p class="small">{{ service.description|truncatechars:120 }}</p></article>{% endfor %}</div></div></section>
+<section class="section" aria-labelledby="trust-title"><div class="container"><h2 id="trust-title">Почему нам доверяют ключи</h2><div class="cards"><article class="card flat"><h3>Договор и ответственность</h3><p>Ответственность за вещи закреплена в договоре.</p></article><article class="card flat"><h3>Адрес доступен участникам заказа</h3><p>Его видят заказчик, назначенная бригада и диспетчер.</p></article><article class="card flat"><h3>Без двойных назначений</h3><p>Перед назначением бригады проверяется её расписание.</p></article></div></div></section>
+<section class="section alt" aria-labelledby="reviews-title"><div class="container"><h2 id="reviews-title">Отзывы заказчиков</h2><div class="cards">{% for review in reviews %}<article class="card"><h3>{{ review.order.customer.user.first_name }}</h3><p class="stars">Оценка {{ review.rating }} из 5</p><p>{{ review.text|default:'Отзыв без комментария' }}</p><p class="small">{{ review.created_at|date:'j E Y' }}</p></article>{% empty %}<p>Пока нет опубликованных отзывов.</p>{% endfor %}</div></div></section>
+{% endblock %}

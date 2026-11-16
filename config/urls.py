@@ -8,6 +8,7 @@ admin.site.site_title = 'Клининговая служба'
 admin.site.enable_nav_sidebar = False
 
 urlpatterns = [
+    path('', include('catalog.urls')),
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
