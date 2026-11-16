@@ -1,6 +1,10 @@
 from datetime import date
 from django.db.models import Count, Sum
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
+from django.contrib import messages
+from django.core.exceptions import ValidationError
+from orders.services import assign_crew, assign_series, free_crews
+from .forms import AssignmentForm
 from django.utils import timezone
 from accounts.access import roles
 from catalog.models import Material, RoomType, Service
@@ -49,3 +53,33 @@ def dashboard(request):
 @roles('Администратор')
 def manage(request):
     return render(request, 'crews/manage.html', {'title': 'Справочники', 'services': Service.objects.all(), 'rooms': RoomType.objects.all(), 'materials': Material.objects.all()})
+
+
+@roles('Диспетчер', 'Администратор')
+def assign(request, pk):
+    order = get_object_or_404(Order.objects.select_related('customer__user', 'address'), pk=pk)
+    form = AssignmentForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        try:
+            assign_crew(pk, form.cleaned_data['crew'])
+        except ValidationError as exc:
+            form.add_error(None, exc)
+        else:
+            messages.success(request, f'Бригада назначена на заказ №{pk}.')
+            return redirect('crews:schedule')
+    return render(request, 'crews/assign.html', {'title': f'Назначение бригады: заказ №{pk}', 'form': form, 'order': order, 'free': free_crews(order.start, order.end, order.pk)})
+
+
+@roles('Диспетчер', 'Администратор')
+def series_assign(request, pk):
+    rule = get_object_or_404(RecurrenceRule.objects.prefetch_related('orders'), pk=pk)
+    form = AssignmentForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        try:
+            assigned = assign_series(rule, form.cleaned_data['crew'])
+        except ValidationError as exc:
+            form.add_error(None, exc)
+        else:
+            messages.success(request, f'Бригада назначена на {len(assigned)} уборок серии.')
+            return redirect('crews:schedule')
+    return render(request, 'crews/series_assign.html', {'title': f'Назначение серии №{pk}', 'form': form, 'rule': rule})
