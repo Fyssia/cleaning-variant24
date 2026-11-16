@@ -3,6 +3,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+handler404 = 'catalog.views.not_found'
+handler403 = 'catalog.views.forbidden'
+
 admin.site.site_header = 'Клининговая служба: администрирование'
 admin.site.site_title = 'Клининговая служба'
 admin.site.enable_nav_sidebar = False

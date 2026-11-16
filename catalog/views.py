@@ -41,7 +41,20 @@ def service_list(request):
     ordering = {'name': 'name', 'price': 'price', '-price': '-price'}.get(sorting, 'name')
     page = Paginator(services.order_by(ordering, 'pk').distinct(), 20).get_page(request.GET.get('page'))
     params = request.GET.copy(); params.pop('page', None)
-    return render(request, 'catalog/list.html', {'title': 'Результаты поиска' if request.resolver_match.url_name == 'search' else 'Каталог услуг', 'page_obj': page, 'query': query, 'kind': kind, 'room': room, 'sort': sorting, 'querystring': params.urlencode(), 'room_types': RoomType.objects.all()})
+    context = {'title': 'Результаты поиска' if request.resolver_match.url_name == 'search' else 'Каталог услуг', 'page_obj': page, 'query': query, 'kind': kind, 'room': room, 'sort': sorting, 'querystring': params.urlencode(), 'room_types': RoomType.objects.all()}
+    if request.resolver_match.url_name == 'service_api':
+        from django.http import JsonResponse
+        from django.template.loader import render_to_string
+        return JsonResponse({'html': render_to_string('catalog/results.html', context, request), 'count': page.paginator.count, 'page': page.number})
+    return render(request, 'catalog/list.html', context)
+
+
+def not_found(request, exception=None):
+    return render(request, '404.html', {'title': 'Страница не найдена'}, status=404)
+
+
+def forbidden(request, exception=None):
+    return render(request, '403.html', {'title': 'Нет доступа'}, status=403)
 
 
 def service_detail(request, slug):
