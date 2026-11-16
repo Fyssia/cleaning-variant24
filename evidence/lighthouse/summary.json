@@ -1,0 +1,23 @@
+[
+  {
+    "page": "home",
+    "url": "http://127.0.0.1:8024/",
+    "performance": 100,
+    "accessibility": 100,
+    "failedAudits": []
+  },
+  {
+    "page": "services",
+    "url": "http://127.0.0.1:8024/services/",
+    "performance": 100,
+    "accessibility": 100,
+    "failedAudits": []
+  },
+  {
+    "page": "order_new",
+    "url": "http://127.0.0.1:8024/orders/new/",
+    "performance": 100,
+    "accessibility": 100,
+    "failedAudits": []
+  }
+]

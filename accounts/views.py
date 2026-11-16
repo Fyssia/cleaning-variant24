@@ -7,7 +7,7 @@ from django.db import transaction
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils import timezone
-from .forms import RegisterForm
+from .forms import LoginForm, RegisterForm
 from .models import Customer
 
 
@@ -22,6 +22,7 @@ def workspace_name(user):
 
 
 class LoginView(DjangoLoginView):
+    authentication_form = LoginForm
     template_name = 'accounts/login.html'
     extra_context = {'title': 'Вход'}
 

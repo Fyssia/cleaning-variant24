@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Вход | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/accounts/login/">Войти</a><a class="mobile-account" href="/accounts/register/">Зарегистрироваться</a></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/accounts/login/">Войти</a><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1"><div class="container"><section class="section"><div class="card form-card auth-card"><h1>Вход</h1><p>Войдите, чтобы оформить заказ или открыть рабочий кабинет.</p><form method="post" data-validate><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED">
+<div class="field"><label for="id_username">E-mail или логин <span class="small">(обязательно)</span></label><input type="text" name="username" autocomplete="username" maxlength="150" required id="id_username"><span class="hint error client-error" id="id_username_client_error"></span></div><div class="field"><label for="id_password">Пароль <span class="small">(обязательно)</span></label><input type="password" name="password" autocomplete="current-password" required id="id_password"><span class="hint error client-error" id="id_password_client_error"></span></div>
+<button class="btn block" type="submit">Войти</button></form><p class="section-heading">Нет аккаунта? <a class="link-btn" href="/accounts/register/">Зарегистрироваться</a></p></div></section></div></main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>

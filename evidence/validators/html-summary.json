@@ -1,0 +1,127 @@
+[
+  {
+    "page": "account_orders",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "addresses",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "assign",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "contacts",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "crew_day",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "crew_print",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "dashboard",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "dispatch",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "error",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "guarantee",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "home",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "login",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "manage",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "order",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "order_new",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "password",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "privacy",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "register",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "review",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "schedule",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "search",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "series",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "series_assign",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "service",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "services",
+    "errors": 0,
+    "messages": []
+  }
+]

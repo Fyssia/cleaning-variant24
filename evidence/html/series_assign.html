@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Назначение серии №4 | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/dispatch/">Диспетчерская</a><form class="mobile-account" action="/accounts/logout/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary" type="submit">Выйти</button></form></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/dispatch/">Диспетчерская</a><form action="/accounts/logout/" method="post" class="logout-form"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary small" type="submit">Выйти</button></form><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1"><div class="container"><section class="section"><h1>Назначение серии №4</h1><nav class="cabinet-nav" aria-label="Рабочие разделы"><a href="/dispatch/">Распределение заказов</a><a href="/dispatch/schedule/">Расписание бригад</a></nav><div class="grid"><article class="card c7"><h2>Уборки серии</h2><p>Раз в неделю · 16.11.2026–10.01.2027</p><ul><li>Заказ №22: 04.01.2027 14:00, бригада назначена</li><li>Заказ №21: 28.12.2026 11:00, бригада назначена</li><li>Заказ №20: 21.12.2026 15:00, новый</li><li>Заказ №19: 14.12.2026 11:00, бригада назначена</li><li>Заказ №18: 07.12.2026 15:00, новый</li><li>Заказ №17: 30.11.2026 15:30, бригада назначена</li><li>Заказ №16: 23.11.2026 08:30, бригада назначена</li><li>Заказ №15: 16.11.2026 11:30, новый</li></ul><p>Назначение применяется ко всем ожидающим уборкам. Если есть конфликт, серия не изменяется.</p></article><div class="card c5"><h2>Бригада на серию</h2><form method="post" data-validate><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED">
+<div class="field"><label for="id_crew">Бригада <span class="small">(обязательно)</span></label><select name="crew" required id="id_crew">
+  <option value="" selected>Выберите бригаду</option>
+
+  <option value="1">Бригада 1</option>
+
+  <option value="2">Бригада 2</option>
+
+  <option value="3">Бригада 3</option>
+
+  <option value="4">Бригада 4</option>
+
+</select><span class="hint error client-error" id="id_crew_client_error"></span></div>
+<button class="btn" type="submit">Назначить серию</button></form></div></div></section></div></main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>

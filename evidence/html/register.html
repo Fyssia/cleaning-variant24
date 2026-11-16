@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Регистрация | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/accounts/login/">Войти</a><a class="mobile-account" href="/accounts/register/">Зарегистрироваться</a></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/accounts/login/">Войти</a><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1"><div class="container"><section class="section"><div class="card form-card auth-card"><h1>Регистрация</h1><p>Данные нужны для связи по заказу. Условия описаны на странице <a href="/privacy/">обработки персональных данных</a>.</p><form method="post" data-validate><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED">
+<div class="field"><label for="id_username">Имя пользователя <span class="small">(обязательно)</span></label><input type="text" name="username" maxlength="150" autofocus required aria-describedby="id_username_helptext" id="id_username"><div class="helptext" id="id_username_helptext">Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_.</div><span class="hint error client-error" id="id_username_client_error"></span></div><div class="field"><label for="id_first_name">Имя <span class="small">(обязательно)</span></label><input type="text" name="first_name" autocomplete="given-name" maxlength="150" required id="id_first_name"><span class="hint error client-error" id="id_first_name_client_error"></span></div><div class="field"><label for="id_last_name">Фамилия <span class="small">(обязательно)</span></label><input type="text" name="last_name" autocomplete="family-name" maxlength="150" required id="id_last_name"><span class="hint error client-error" id="id_last_name_client_error"></span></div><div class="field"><label for="id_email">Электронная почта <span class="small">(обязательно)</span></label><input type="email" name="email" autocomplete="email" maxlength="320" required id="id_email"><span class="hint error client-error" id="id_email_client_error"></span></div><div class="field"><label for="id_phone">Телефон <span class="small">(обязательно)</span></label><input type="tel" name="phone" autocomplete="tel" pattern="\+7[0-9]{10}" maxlength="12" required aria-describedby="id_phone_helptext" id="id_phone"><div class="helptext" id="id_phone_helptext">Формат: +7XXXXXXXXXX</div><span class="hint error client-error" id="id_phone_client_error"></span></div><div class="field"><label for="id_password1">Пароль <span class="small">(обязательно)</span></label><input type="password" name="password1" autocomplete="new-password" required aria-describedby="id_password1_helptext" id="id_password1"><div class="helptext" id="id_password1_helptext"><ul><li>Пароль не должен быть слишком похож на другую вашу личную информацию.</li><li>Ваш пароль должен содержать как минимум 8 символов.</li><li>Пароль не должен быть слишком простым и распространенным.</li><li>Пароль не может состоять только из цифр.</li></ul></div><span class="hint error client-error" id="id_password1_client_error"></span></div><div class="field"><label for="id_password2">Подтверждение пароля <span class="small">(обязательно)</span></label><input type="password" name="password2" autocomplete="new-password" required aria-describedby="id_password2_helptext" id="id_password2"><div class="helptext" id="id_password2_helptext">Для подтверждения введите, пожалуйста, пароль ещё раз.</div><span class="hint error client-error" id="id_password2_client_error"></span></div><div class="field"><label for="id_consent">Согласен на обработку персональных данных <span class="small">(обязательно)</span></label><input type="checkbox" name="consent" required id="id_consent"><span class="hint error client-error" id="id_consent_client_error"></span></div>
+<button class="btn block" type="submit">Создать аккаунт</button></form><p class="section-heading">Уже есть аккаунт? <a class="link-btn" href="/accounts/login/">Войти</a></p></div></section></div></main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>

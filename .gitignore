@@ -12,3 +12,5 @@ __pycache__/
 logs/
 node_modules/
 .coverage
+evidence/*progress*.jsonl
+evidence/validator-retry.jsonl

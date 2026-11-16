@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Расписание бригад | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/dispatch/">Диспетчерская</a><form class="mobile-account" action="/accounts/logout/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary" type="submit">Выйти</button></form></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/dispatch/">Диспетчерская</a><form action="/accounts/logout/" method="post" class="logout-form"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary small" type="submit">Выйти</button></form><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1"><div class="container"><section class="section"><h1>Расписание бригад</h1><nav class="cabinet-nav" aria-label="Рабочие разделы"><a href="/dispatch/">Распределение заказов</a><a href="/dispatch/schedule/">Расписание бригад</a></nav><form method="get" class="row"><div class="field"><label for="schedule-date">Дата</label><input class="input" id="schedule-date" name="date" type="date" value="2026-11-14"></div><button class="btn secondary" type="submit">Показать расписание</button></form><div class="cards two"><article class="card"><h2>Бригада 1</h2><p class="small">Белов Дмитрий Игоревич, Макарова Елена Игоревна, Павлова Наталья Андреевна</p><ul class="schedule-list"></ul></article><article class="card"><h2>Бригада 2</h2><p class="small">Козлова Татьяна Сергеевна, Новикова Ольга Сергеевна, Фёдорова Ольга Павловна</p><ul class="schedule-list"></ul></article><article class="card"><h2>Бригада 3</h2><p class="small">Киселёва Ольга Павловна, Комарова Ольга Игоревна, Орлов Павел Сергеевич</p><ul class="schedule-list"></ul></article><article class="card"><h2>Бригада 4</h2><p class="small">Лебедева Наталья Игоревна, Попова Ирина Сергеевна, Соловьёв Павел Павлович</p><ul class="schedule-list"></ul></article></div></section></div></main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>

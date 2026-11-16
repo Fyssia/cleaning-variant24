@@ -1,0 +1,152 @@
+[
+  {
+    "key": "home",
+    "url": "/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "services",
+    "url": "/services/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "service",
+    "url": "/services/general/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "guarantee",
+    "url": "/guarantee/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "contacts",
+    "url": "/contacts/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "search",
+    "url": "/search/?q=уборка",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "privacy",
+    "url": "/privacy/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "login",
+    "url": "/accounts/login/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "register",
+    "url": "/accounts/register/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "password",
+    "url": "/accounts/password_change/",
+    "role": "client1",
+    "status": 200
+  },
+  {
+    "key": "order_new",
+    "url": "/orders/new/",
+    "role": "client1",
+    "status": 200
+  },
+  {
+    "key": "account_orders",
+    "url": "/account/orders/",
+    "role": "client1",
+    "status": 200
+  },
+  {
+    "key": "addresses",
+    "url": "/account/addresses/",
+    "role": "client1",
+    "status": 200
+  },
+  {
+    "key": "series",
+    "url": "/account/series/",
+    "role": "client1",
+    "status": 200
+  },
+  {
+    "key": "order",
+    "url": "/account/orders/8/",
+    "role": "client1",
+    "status": 200
+  },
+  {
+    "key": "review",
+    "url": "/account/orders/55/review/",
+    "role": "client11",
+    "status": 200
+  },
+  {
+    "key": "dispatch",
+    "url": "/dispatch/",
+    "role": "dispatcher",
+    "status": 200
+  },
+  {
+    "key": "schedule",
+    "url": "/dispatch/schedule/?date=2026-11-14",
+    "role": "dispatcher",
+    "status": 200
+  },
+  {
+    "key": "assign",
+    "url": "/dispatch/orders/20/",
+    "role": "dispatcher",
+    "status": 200
+  },
+  {
+    "key": "series_assign",
+    "url": "/dispatch/series/4/",
+    "role": "dispatcher",
+    "status": 200
+  },
+  {
+    "key": "crew_day",
+    "url": "/crew/?date=2027-01-04",
+    "role": "crew1",
+    "status": 200
+  },
+  {
+    "key": "crew_print",
+    "url": "/crew/orders/22/print/",
+    "role": "crew1",
+    "status": 200
+  },
+  {
+    "key": "dashboard",
+    "url": "/dashboard/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "manage",
+    "url": "/manage/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "error",
+    "url": "/404/",
+    "role": null,
+    "status": 404
+  }
+]

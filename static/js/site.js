@@ -125,3 +125,5 @@ for (const form of document.querySelectorAll('form[data-validate]')) {
     if (firstInvalid) {event.preventDefault(); firstInvalid.focus();}
   });
 }
+
+document.querySelector('#choose-time')?.addEventListener('click', event => {if (calculator && !calculator.checkValidity()) {event.preventDefault();calculator.reportValidity();}});

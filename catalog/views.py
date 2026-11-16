@@ -6,9 +6,9 @@ from .models import Service, RoomType
 def home(request):
     return render(request, 'catalog/home.html', {
         'title': 'Уборка квартир, домов и офисов',
-        'services': Service.objects.filter(is_active=True, kind='main').prefetch_related('room_types')[:3],
+        'services': Service.objects.filter(is_active=True, kind='main').exclude(slug='office-daily').order_by('price').prefetch_related('room_types')[:3],
         'main_services': Service.objects.filter(is_active=True, kind='main'),
-        'extra_services': Service.objects.filter(is_active=True, kind='extra'),
+        'extra_services': sorted(Service.objects.filter(is_active=True, kind='extra', slug__in=['window', 'fridge', 'oven', 'cabinets']), key=lambda s: ['window', 'fridge', 'oven', 'cabinets'].index(s.slug)),
         'room_types': RoomType.objects.all(),
         'reviews': Review.objects.filter(is_published=True).select_related('order__customer__user').prefetch_related('order__items__service')[:3],
     })

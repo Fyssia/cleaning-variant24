@@ -1,0 +1,12 @@
+{
+  "name": "cleaning-variant24-checks",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "lighthouse": "^13.6.0",
+    "playwright": "^1.65.1"
+  },
+  "scripts": {
+    "check": "node browser_check.mjs"
+  }
+}

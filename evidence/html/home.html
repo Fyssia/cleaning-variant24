@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Уборка квартир, домов и офисов | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/accounts/login/">Войти</a><a class="mobile-account" href="/accounts/register/">Зарегистрироваться</a></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/accounts/login/">Войти</a><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1">
+<section class="hero"><div class="container"><h1>Уборка квартир, домов и офисов</h1><p class="muted">Цена считается сразу, без звонка. Бригада приезжает в выбранное время со своим инвентарём.</p></div></section>
+<section class="section" aria-labelledby="calculator-title"><div class="container"><div class="grid">
+  <div class="c8 card flat stack"><h2 id="calculator-title">Калькулятор стоимости</h2>
+    <form id="calculator" method="get" data-endpoint="/api/estimate/">
+      <fieldset class="room-fieldset"><legend>Тип помещения</legend><div class="seg"><label><input name="room_type" type="radio" value="1" checked><span>Квартира</span></label><label><input name="room_type" type="radio" value="2"><span>Частный дом</span></label><label><input name="room_type" type="radio" value="3"><span>Офис</span></label></div></fieldset>
+      <div class="grid calculator-fields"><div class="c4 field"><label for="area">Площадь, м²</label><input class="input" id="area" name="area" type="number" min="10" max="1000" step="0.1" value="54" required aria-describedby="area-hint"><span id="area-hint" class="hint">От 10 до 1000 м²</span></div>
+      <div class="c8 field"><label for="service">Вид уборки</label><select class="select" id="service" name="service"><option value="2" selected>Генеральная уборка · 200 ₽/м²</option><option value="4">Ежедневная уборка офиса · 60 ₽/м²</option><option value="1">Поддерживающая уборка · 100 ₽/м²</option><option value="3">Уборка после ремонта · 250 ₽/м²</option></select></div></div>
+      <fieldset class="extras"><legend>Дополнительные услуги</legend><div class="ex-row"><label for="extra_5">Мытьё окна (створка) <span class="small">350 ₽</span></label><input class="input quantity" id="extra_5" name="extra_5" type="number" min="0" max="20" value="2" aria-label="Мытьё окна (створка): количество"></div><div class="ex-row"><label for="extra_6">Холодильник внутри <span class="small">700 ₽</span></label><input class="input quantity" id="extra_6" name="extra_6" type="number" min="0" max="20" value="1" aria-label="Холодильник внутри: количество"></div><div class="ex-row"><label for="extra_7">Духовка внутри <span class="small">600 ₽</span></label><input class="input quantity" id="extra_7" name="extra_7" type="number" min="0" max="20" value="0" aria-label="Духовка внутри: количество"></div><div class="ex-row"><label for="extra_9">Кухонные шкафы внутри <span class="small">800 ₽</span></label><input class="input quantity" id="extra_9" name="extra_9" type="number" min="0" max="20" value="0" aria-label="Кухонные шкафы внутри: количество"></div></fieldset>
+      <button class="btn" type="submit">Рассчитать стоимость</button>
+    </form>
+  </div>
+  <div class="c4"><aside class="summary" aria-labelledby="estimate-title"><h2 id="estimate-title">Ваш заказ</h2><div id="estimate" role="status"><p class="muted">Укажите параметры уборки, чтобы узнать стоимость и длительность.</p></div><p id="estimate-error" class="hint error" role="alert"></p><a class="btn block" id="choose-time" href="/orders/new/">Выбрать время</a><p class="small summary-hint">Телефон для расчёта не нужен</p></aside></div>
+</div></div></section>
+<section class="section alt" aria-labelledby="popular-title"><div class="container"><h2 id="popular-title">Популярные услуги</h2><div class="cards"><article class="card"><img class="service-image home-image" src="/static/images/services/support.svg" alt="Поддерживающая уборка" width="480" height="240" loading="lazy"><h3>Поддерживающая уборка</h3><p class="price">от 100 ₽ за м²</p><p class="small">Поддерживающая уборка: цена за 1 м², итог зависит от типа помещения.</p><a class="link-btn" href="/services/support/">Подробнее: Поддерживающая уборка</a></article><article class="card"><img class="service-image home-image" src="/static/images/services/general.svg" alt="Генеральная уборка" width="480" height="240" loading="lazy"><h3>Генеральная уборка</h3><p class="price">от 200 ₽ за м²</p><p class="small">Генеральная уборка: цена за 1 м², итог зависит от типа помещения.</p><a class="link-btn" href="/services/general/">Подробнее: Генеральная уборка</a></article><article class="card"><img class="service-image home-image" src="/static/images/services/after-repair.svg" alt="Уборка после ремонта" width="480" height="240" loading="lazy"><h3>Уборка после ремонта</h3><p class="price">от 250 ₽ за м²</p><p class="small">Уборка после ремонта: цена за 1 м², итог зависит от типа помещения.</p><a class="link-btn" href="/services/after-repair/">Подробнее: Уборка после ремонта</a></article></div></div></section>
+<section class="section" aria-labelledby="trust-title"><div class="container"><h2 id="trust-title">Почему нам доверяют ключи</h2><div class="cards"><article class="card flat"><h3>Договор и ответственность</h3><p>Ответственность за вещи закреплена в договоре.</p></article><article class="card flat"><h3>Адрес доступен участникам заказа</h3><p>Его видят заказчик, назначенная бригада и диспетчер.</p></article><article class="card flat"><h3>Без двойных назначений</h3><p>Перед назначением бригады проверяется её расписание.</p></article></div></div></section>
+<section class="section alt" aria-labelledby="reviews-title"><div class="container"><h2 id="reviews-title">Отзывы заказчиков</h2><div class="cards"><article class="card"><h3>Сергей</h3><p class="stars">Оценка 5 из 5</p><p>Окна без разводов, буду заказывать регулярно.</p><p class="small">13 ноября 2026</p></article><article class="card"><h3>Сергей</h3><p class="stars">Оценка 5 из 5</p><p>Окна без разводов, буду заказывать регулярно.</p><p class="small">13 ноября 2026</p></article><article class="card"><h3>Наталья</h3><p class="stars">Оценка 5 из 5</p><p>Окна без разводов, буду заказывать регулярно.</p><p class="small">13 ноября 2026</p></article></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>

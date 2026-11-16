@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Результаты поиска | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/accounts/login/">Войти</a><a class="mobile-account" href="/accounts/register/">Зарегистрироваться</a></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/accounts/login/">Войти</a><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1">
+<div class="container"><nav class="crumbs" aria-label="Хлебные крошки"><a href="/">Главная</a> / Результаты поиска</nav><section class="section"><h1>Результаты поиска</h1>
+<form class="catalog-filter card flat" id="catalog-filter" action="/search/" method="get" data-endpoint="/api/services/"><div class="grid">
+<div class="c4 field"><label for="q">Найти услугу</label><input class="input" id="q" type="search" name="q" value="уборка" maxlength="100" placeholder="Например, мытьё окон"></div>
+<div class="c3 field"><label for="kind">Вид услуги</label><select class="select" id="kind" name="kind"><option value="">Все услуги</option><option value="main">Уборка помещений</option><option value="extra">Дополнительные</option></select></div>
+<div class="c3 field"><label for="room">Помещение</label><select class="select" id="room" name="room"><option value="">Все помещения</option><option value="1">Квартира</option><option value="2">Частный дом</option><option value="3">Офис</option></select></div>
+<div class="c2 field"><label for="sort">Сортировка</label><select class="select" id="sort" name="sort"><option value="name">По названию</option><option value="price">Сначала дешевле</option><option value="-price">Сначала дороже</option></select></div></div>
+<div class="row"><button class="btn" type="submit">Найти услуги</button><a class="btn secondary" href="/services/">Сбросить фильтры</a><span class="hint" id="search-status" role="status"></span></div></form>
+<div id="catalog-results" class="section-heading"><p class="muted">Найдено услуг: 3. По запросу «уборка».</p>
+<div class="cards"><article class="card service-card"><img class="service-image" src="/static/images/services/general.svg" alt="Генеральная уборка" width="480" height="240" loading="lazy"><span class="badge">Вид уборки</span><h2>Генеральная уборка</h2><p class="price">200 ₽ / м²</p><p class="small">Генеральная уборка: цена за 1 м², итог зависит от типа помещения.</p><a class="link-btn" href="/services/general/">Подробнее об услуге</a></article>
+<article class="card service-card"><img class="service-image" src="/static/images/services/office-daily.svg" alt="Ежедневная уборка офиса" width="480" height="240" loading="lazy"><span class="badge">Вид уборки</span><h2>Ежедневная уборка офиса</h2><p class="price">60 ₽ / м²</p><p class="small">Ежедневная уборка офиса: цена за 1 м², итог зависит от типа помещения.</p><a class="link-btn" href="/services/office-daily/">Подробнее об услуге</a></article>
+<article class="card service-card"><img class="service-image" src="/static/images/services/support.svg" alt="Поддерживающая уборка" width="480" height="240" loading="lazy"><span class="badge">Вид уборки</span><h2>Поддерживающая уборка</h2><p class="price">100 ₽ / м²</p><p class="small">Поддерживающая уборка: цена за 1 м², итог зависит от типа помещения.</p><a class="link-btn" href="/services/support/">Подробнее об услуге</a></article>
+</div>
+
+
+</div>
+</section></div></main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>

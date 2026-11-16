@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Сводка | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/dashboard/">Сводка</a><form class="mobile-account" action="/accounts/logout/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary" type="submit">Выйти</button></form></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/dashboard/">Сводка</a><form action="/accounts/logout/" method="post" class="logout-form"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary small" type="submit">Выйти</button></form><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1"><div class="container"><section class="section"><h1>Сводка</h1><nav class="cabinet-nav" aria-label="Рабочие разделы"><a href="/dispatch/">Распределение заказов</a><a href="/dispatch/schedule/">Расписание бригад</a><a href="/dashboard/">Сводка</a><a href="/manage/">Справочники</a></nav><div class="cards"><article class="card"><h2>Всего заказов</h2><p class="kpi">56</p></article><article class="card"><h2>Сумма заказов</h2><p class="kpi">697584 ₽</p></article><article class="card"><h2>Бригад</h2><p class="kpi">4</p></article></div><h2 class="section-heading">Загрузка бригад</h2><div class="cards two"><article class="card"><h3>Бригада 1</h3><p>13 заказов · 142808 ₽</p><label for="crew-load-1">Количество заказов</label><meter id="crew-load-1" min="0" max="56" value="13">13</meter></article><article class="card"><h3>Бригада 2</h3><p>8 заказов · 177132 ₽</p><label for="crew-load-2">Количество заказов</label><meter id="crew-load-2" min="0" max="56" value="8">8</meter></article><article class="card"><h3>Бригада 3</h3><p>8 заказов · 73190 ₽</p><label for="crew-load-3">Количество заказов</label><meter id="crew-load-3" min="0" max="56" value="8">8</meter></article><article class="card"><h3>Бригада 4</h3><p>8 заказов · 114213 ₽</p><label for="crew-load-4">Количество заказов</label><meter id="crew-load-4" min="0" max="56" value="8">8</meter></article></div><h2 class="section-heading">Материалы</h2><div class="table-wrap"><table class="table"><caption>Остатки расходных материалов</caption><thead><tr><th scope="col">Материал</th><th scope="col">Остаток</th><th scope="col">Минимум</th></tr></thead><tbody><tr><td data-l="Материал">Антижир для кухни</td><td data-l="Остаток">15,00 л</td><td data-l="Минимум">4,00 л</td></tr><tr><td data-l="Материал">Губки</td><td data-l="Остаток">200,00 шт.</td><td data-l="Минимум">50,00 шт.</td></tr><tr><td data-l="Материал">Дезинфицирующее средство</td><td data-l="Остаток">12,00 л</td><td data-l="Минимум">3,00 л</td></tr><tr><td data-l="Материал">Мешки для мусора</td><td data-l="Остаток">30,00 рулон</td><td data-l="Минимум">8,00 рулон</td></tr><tr><td data-l="Материал">Перчатки нитриловые</td><td data-l="Остаток">150,00 шт.</td><td data-l="Минимум">40,00 шт.</td></tr><tr><td data-l="Материал">Полироль для мебели</td><td data-l="Остаток">8,00 л</td><td data-l="Минимум">2,00 л</td></tr><tr><td data-l="Материал">Салфетки из микрофибры</td><td data-l="Остаток">120,00 шт.</td><td data-l="Минимум">30,00 шт.</td></tr><tr><td data-l="Материал">Средство для сантехники</td><td data-l="Остаток">20,00 л</td><td data-l="Минимум">5,00 л</td></tr><tr><td data-l="Материал">Средство для стёкол</td><td data-l="Остаток">25,00 л</td><td data-l="Минимум">5,00 л</td></tr><tr><td data-l="Материал">Универсальное моющее средство</td><td data-l="Остаток">40,00 л</td><td data-l="Минимум">10,00 л</td></tr></tbody></table></div></section></div></main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>

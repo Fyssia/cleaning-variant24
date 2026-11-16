@@ -1,0 +1,164 @@
+{
+  "cssvalidation" : {
+     "uri"       : "site.css",
+     "checkedby" : "http://www.w3.org/2005/07/css-validator",
+     "csslevel"  : "css3",
+     "date"      : "2026-11-16T01:47:35Z",
+     "timestamp" : "1794836855106",
+     "validity"  : true,
+     "result"    : {
+		"errorcount"   : 0,
+		"warningcount" : 17
+                   }
+       ,
+     "warnings"   : [
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 19,
+         "message" :  "\u201C-webkit-text-size-adjust\u201D is a vendor extension",
+         "type"    :  "vendor-extension",
+         "level"   : 0
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 74,
+       "context" :  ".btn.is-hover", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 74,
+       "context" :  ".btn.is-hover", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 75,
+       "context" :  ".btn.is-pressed", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 75,
+       "context" :  ".btn.is-pressed", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 76,
+       "context" :  ".btn.is-disabled", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 76,
+       "context" :  ".btn.is-disabled", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 77,
+       "context" :  ".btn.is-error", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 95,
+       "context" :  ".select.is-disabled", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 95,
+       "context" :  ".select.is-disabled", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 101,
+         "message" :  "Due to their dynamic nature, CSS variables are currently not statically checked",
+         "type"    :  "css-variable",
+         "level"   : 0
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 111,
+       "context" :  ".check i.on", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 117,
+         "message" :  "Due to their dynamic nature, CSS variables are currently not statically checked",
+         "type"    :  "css-variable",
+         "level"   : 0
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 118,
+         "message" :  "Due to their dynamic nature, CSS variables are currently not statically checked",
+         "type"    :  "css-variable",
+         "level"   : 0
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 157,
+       "context" :  ".slot.busy", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 157,
+       "context" :  ".slot.on", 
+         "message" :  "Same color for \u201Cbackground-color\u201D and \u201Cborder-color\u201D",
+         "type"    :  "same-colors",
+         "level"   : 1
+      }
+     ,
+      {
+         "source"  : "file://localhost/site.css",
+         "line"    : 186,
+         "message" :  "\u201C-webkit-text-stroke\u201D is a vendor extension",
+         "type"    :  "vendor-extension",
+         "level"   : 0
+      }
+                     ]
+    }
+}

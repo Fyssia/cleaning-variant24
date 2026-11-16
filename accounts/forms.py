@@ -1,7 +1,20 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.models import User
 from .models import Address, Customer, phone_validator
+
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(label='E-mail или логин', max_length=254, widget=forms.TextInput(attrs={'autocomplete': 'username'}))
+    error_messages = {'invalid_login': 'Проверьте e-mail или логин и пароль.', 'inactive': 'Эта учётная запись отключена.'}
+
+    def clean(self):
+        identifier = self.cleaned_data.get('username', '')
+        if '@' in identifier:
+            user = User.objects.filter(email__iexact=identifier).first()
+            if user:
+                self.cleaned_data['username'] = user.username
+        return super().clean()
 
 
 class RegisterForm(UserCreationForm):
@@ -32,4 +45,16 @@ class AddressForm(forms.ModelForm):
     class Meta:
         model = Address
         fields = ['city', 'street', 'house', 'flat', 'floor', 'comment']
-        widgets = {'city': forms.TextInput(attrs={'autocomplete': 'address-level2'}), 'street': forms.TextInput(attrs={'autocomplete': 'street-address'})}
+        widgets = {'city': forms.TextInput(attrs={'autocomplete': 'address-level2'}), 'street': forms.TextInput(attrs={'autocomplete': 'address-line1'})}
+
+
+    def clean(self):
+        data = super().clean()
+        keys = ['city', 'street', 'house', 'flat']
+        if self.instance.customer_id and all(key in data for key in keys):
+            query = Address.objects.filter(customer_id=self.instance.customer_id, **{key: data[key] for key in keys})
+            if self.instance.pk:
+                query = query.exclude(pk=self.instance.pk)
+            if query.exists():
+                raise forms.ValidationError('Этот адрес уже сохранён. Выберите его при оформлении заказа.')
+        return data

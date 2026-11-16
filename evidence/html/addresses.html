@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Клининговая служба: уборка квартир, домов и офисов. Расчёт стоимости и оформление заказа онлайн.">
+  <title>Мои адреса | Клининговая служба</title>
+  <link rel="icon" href="/static/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="header"><div class="container">
+  <a class="logo" href="/"><img src="/static/images/mark.svg" width="32" height="32" alt=""><span>Клининговая служба</span></a>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="/services/">Услуги</a><a href="/guarantee/">Гарантии</a><a href="/contacts/">Контакты</a><a class="mobile-account" href="/account/orders/">Личный кабинет</a><form class="mobile-account" action="/accounts/logout/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary" type="submit">Выйти</button></form></nav>
+  <div class="right"><span class="phone">8 (800) 000-00-00</span><a class="btn secondary small" href="/account/orders/">Мои заказы</a><form action="/accounts/logout/" method="post" class="logout-form"><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED"><button class="btn secondary small" type="submit">Выйти</button></form><button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
+</div></header>
+
+<main id="main" tabindex="-1"><div class="container"><section class="section"><h1>Мои адреса</h1><nav class="cabinet-nav" aria-label="Личный кабинет"><a href="/account/orders/">Мои заказы</a><a href="/account/addresses/">Адреса</a><a href="/account/series/">Серии уборок</a><a href="/accounts/password_change/">Сменить пароль</a></nav>
+<div class="cards two"><article class="card"><h2>Москва</h2><p>ул. Лесная, д. 56</p><p class="small">Код домофона скажем по телефону</p></article><article class="card"><h2>Москва</h2><p>ул. Цветочная, д. 29</p><p class="small">Без комментария</p></article></div><div class="card form-card section-heading"><h2>Добавить адрес</h2><form method="post" data-validate><input type="hidden" name="csrfmiddlewaretoken" value="REDACTED">
+<div class="field"><label for="id_city">Город <span class="small">(обязательно)</span></label><input type="text" name="city" value="Москва" autocomplete="address-level2" maxlength="60" required id="id_city"><span class="hint error client-error" id="id_city_client_error"></span></div><div class="field"><label for="id_street">Улица <span class="small">(обязательно)</span></label><input type="text" name="street" autocomplete="address-line1" maxlength="120" required id="id_street"><span class="hint error client-error" id="id_street_client_error"></span></div><div class="field"><label for="id_house">Дом, корпус <span class="small">(обязательно)</span></label><input type="text" name="house" maxlength="20" required id="id_house"><span class="hint error client-error" id="id_house_client_error"></span></div><div class="field"><label for="id_flat">Квартира, офис</label><input type="text" name="flat" maxlength="10" id="id_flat"><span class="hint error client-error" id="id_flat_client_error"></span></div><div class="field"><label for="id_floor">Этаж</label><input type="number" name="floor" id="id_floor"><span class="hint error client-error" id="id_floor_client_error"></span></div><div class="field"><label for="id_comment">Комментарий для бригады</label><input type="text" name="comment" maxlength="255" id="id_comment"><span class="hint error client-error" id="id_comment_client_error"></span></div>
+<button class="btn" type="submit">Сохранить адрес</button></form></div></section></div></main>
+<footer class="footer"><div class="container"><div class="cols">
+  <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
+  <div><p class="footer-title">Клиентам</p><a href="/">Калькулятор стоимости</a><br><a href="/guarantee/">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="/contacts/">Контакты</a><br><a href="/privacy/">Обработка персональных данных</a></div>
+  <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
+</div><div class="legal">© 2026 Клининговая служба. Учебный проект.</div></div></footer>
+</body></html>
