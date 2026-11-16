@@ -1,0 +1,36 @@
+Практическая №5. Вариант 24 — клининговая служба
+
+В проект включены 14 моделей Django, миграции, заполненная SQLite и демофото.
+Это этап проектирования данных. Пользовательские страницы реализуются
+в следующих практических; сейчас доступны админка и документация моделей.
+
+NixOS (из этой папки):
+  nix-shell
+  python manage.py check
+  python manage.py makemigrations --check --dry-run
+  python manage.py migrate
+  python manage.py runserver
+
+Другие системы (Python 3.10+):
+  python -m venv .venv
+  Активируйте .venv (Linux: source .venv/bin/activate;
+  Windows: .venv\Scripts\activate).
+  python -m pip install -r requirements.txt
+  python manage.py migrate
+  python manage.py seed_demo
+  python manage.py runserver
+
+Админка: http://127.0.0.1:8000/admin/
+Структура моделей: http://127.0.0.1:8000/admin/doc/models/
+Демо-пользователи: admin, dispatcher, crew1–crew4, client1–client14.
+Пароль учебных учётных записей: demo-pass-24.
+seed_demo не меняет уже заполненную базу.
+
+Проверка базы, её связей, цен и расписания:
+  python ../занятие_5_данные/verify_data.py
+Развёртывание с нуля во временной базе, без изменения рабочей:
+  python ../занятие_5_данные/verify_data.py --fresh
+
+В архиве project/cleaning запускается независимо от отчёта.
+В комплект также включены исходники ER-диаграммы, скриншоты,
+матрица трассировки и результаты проверки.

@@ -1,0 +1,14 @@
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+db.sqlite3
+*.sqlite3
+media/
+staticfiles/
+__pycache__/
+*.pyc
+logs/
+node_modules/
+.coverage
