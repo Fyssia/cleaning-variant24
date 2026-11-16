@@ -13,14 +13,14 @@
 <a class="skip-link" href="#main">К содержимому</a>
 <header class="header"><div class="container">
   <a class="logo" href="{% url 'catalog:home' %}"><img src="{% static 'images/mark.svg' %}" width="32" height="32" alt=""><span>Клининговая служба</span></a>
-  <nav class="nav" id="main-nav" aria-label="Основная навигация">{% block navigation %}{% endblock %}</nav>
+  <nav class="nav" id="main-nav" aria-label="Основная навигация"><a href="{% url 'catalog:home' %}">Рассчитать уборку</a><a href="{% url 'catalog:guarantee' %}">Гарантии</a><a href="{% url 'catalog:contacts' %}">Контакты</a></nav>
   <div class="right"><span class="phone">8 (800) 000-00-00</span>{% block account_link %}{% endblock %}<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true"></span></button></div>
 </div></header>
 {% if messages %}<div class="container messages" role="status">{% for message in messages %}<p class="note {{ message.tags }}">{{ message }}</p>{% endfor %}</div>{% endif %}
 <main id="main" tabindex="-1">{% block content %}{% endblock %}</main>
 <footer class="footer"><div class="container"><div class="cols">
   <div><p class="footer-title">Клининговая служба</p><p>Уборка квартир, домов и офисов.<br>Цена сразу, без звонка.</p></div>
-  {% block footer_links %}{% endblock %}
+  <div><p class="footer-title">Клиентам</p><a href="{% url 'catalog:home' %}">Калькулятор стоимости</a><br><a href="{% url 'catalog:guarantee' %}">Гарантии и условия</a></div><div><p class="footer-title">Информация</p><a href="{% url 'catalog:contacts' %}">Контакты</a><br><a href="{% url 'catalog:privacy' %}">Обработка персональных данных</a></div>
   <div><p class="footer-title">Связь</p><p>8 (800) 000-00-00<br>ежедневно 8:00–21:00</p></div>
 </div><div class="legal">© {% now 'Y' %} Клининговая служба. Учебный проект.</div></div></footer>
 </body></html>

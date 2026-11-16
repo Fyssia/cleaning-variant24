@@ -12,3 +12,13 @@ def home(request):
         'room_types': RoomType.objects.all(),
         'reviews': Review.objects.filter(is_published=True).select_related('order__customer__user').prefetch_related('order__items__service')[:3],
     })
+
+
+def information(request, page):
+    pages = {
+        'guarantee': ('Гарантии и условия', 'guarantee.html'),
+        'contacts': ('Контакты', 'contacts.html'),
+        'privacy': ('Обработка персональных данных', 'privacy.html'),
+    }
+    title, template = pages[page]
+    return render(request, 'catalog/' + template, {'title': title})
