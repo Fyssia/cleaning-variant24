@@ -1,0 +1,1 @@
+<nav class="cabinet-nav" aria-label="Рабочие разделы">{% if is_dispatcher or is_manager %}<a href="{% url 'crews:dispatch' %}">Распределение заказов</a><a href="{% url 'crews:schedule' %}">Расписание бригад</a>{% endif %}{% if is_manager %}<a href="{% url 'crews:dashboard' %}">Сводка</a><a href="{% url 'crews:manage' %}">Справочники</a>{% endif %}</nav>

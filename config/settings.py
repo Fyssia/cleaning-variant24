@@ -100,3 +100,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'orders:mine'
+LOGOUT_REDIRECT_URL = 'catalog:home'

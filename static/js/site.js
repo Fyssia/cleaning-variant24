@@ -16,3 +16,5 @@ document.addEventListener('keydown', event => {
   }
 });
 window.matchMedia('(min-width: 1024px)').addEventListener('change', closeMenu);
+
+document.querySelector('#print-order')?.addEventListener('click', () => window.print());

@@ -1,0 +1,10 @@
+from django.urls import path
+from . import views
+
+app_name = 'orders'
+urlpatterns = [
+    path('account/orders/', views.mine, name='mine'),
+    path('account/orders/<int:pk>/', views.detail, name='detail'),
+    path('account/addresses/', views.addresses, name='addresses'),
+    path('account/series/', views.series, name='series'),
+]
